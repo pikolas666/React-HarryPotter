@@ -2,7 +2,7 @@
 
 .banner {
    
-    flex:1 1 0%;
+    flex:1 1 30%;
     background-color: #fff; /* Set the background color */
     padding: 20px; /* Add some padding for better spacing */
     border-radius: 8px; /* Add rounded corners for a nicer look */

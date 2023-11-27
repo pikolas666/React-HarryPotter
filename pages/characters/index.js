@@ -1,14 +1,10 @@
 import axios from "axios";
 import { useState, useEffect } from 'react';
-import Image from "next/image";
-import Link from 'next/link'
 import Head from 'next/head';
-import Header from "../components/Header/Header";
-import CardWrapper from '../components/Card-wrapper/Card-wrapper';
-import Spinner from '../components/Spinner/Spinner'
-import Banner from "../components/Banner/Banner";
-import wallImage from "../assets/wall.jpg"
-import styles from '../styles/Home.module.css'
+import Header from "../../components/Header/Header";
+import CardWrapper from '../../components/Card-wrapper/Card-wrapper';
+import Spinner from '../../components/Spinner/Spinner'
+import Banner from "../../components/Banner/Banner";
 
 export default function Home() {
   const [characters, setCharacters] = useState([]);
@@ -48,13 +44,11 @@ export default function Home() {
       <Header />
       <main>
         <Banner />
-        <Image
-            className={styles.image}
-            alt="character photo"
-            src={wallImage}
-            width={600}
-            height={300}
-          />
+        {loading ? (
+          <Spinner />
+        ) : (
+          <CardWrapper characters={characters} onDelete={handleDelete} />
+        )}
         <div style={{flex: '1 1 30%',  padding: '20px'}}></div>
       </main>
     </>

@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState} from 'react'
+import Link from 'next/link'
 import styles from './Navigation.module.css'; 
 
 const Navigation = () => {
@@ -21,10 +22,10 @@ const Navigation = () => {
             <div className={styles.nav}>
         
                 <nav>
-                <a href="#">Home</a>
+                <Link href="/">Home</Link>
                 <a href="#">Books</a>
                 <a href="#">Movies</a>
-                <a href="#">Characters</a>
+                <Link href="/characters">Characters</Link>
                 <a href="#">Spells</a>
                 
                 </nav>

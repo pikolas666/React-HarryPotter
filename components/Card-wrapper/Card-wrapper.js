@@ -9,12 +9,13 @@ const CardWrapper = ({ characters, onDelete }) => {
       {characters.map((character) => (
         <Card
           key={character.id}
+          id={character.id}
           title={character.name}
           image={character.image || image.src} 
           paragraph={character.actor}
           onDelete={() => onDelete(character.id)
           }
-          showId={()=>console.log(character.id)}
+          showId={() => character.id}
         />
       ))}
     </div>

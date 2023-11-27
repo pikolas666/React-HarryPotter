@@ -6,6 +6,9 @@ main {
     gap:1rem;
     justify-content: space-between;
 }
+a{
+    all:unset;
+}
 @media only screen and (max-width: 1024px) {
     main {
       display: flex;

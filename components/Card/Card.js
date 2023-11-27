@@ -1,19 +1,17 @@
 import React from 'react';
 import Image from "next/image";
+import Link from 'next/link'
 import styles from "./Card.module.css";
 
-const Card = ({ title, image, paragraph, onDelete, showId }) => {
-  const handleButtonClick = () => {
+const Card = ({ id, title, image, onDelete, showId}) => {
+   const handleButtonClick = () => {
     console.log("Button clicked for deletion!");
     onDelete(); 
   };
-  const logId = () => {
-    showId()
-  };
- 
 
   return (
-    <div onClick={logId} className={styles.description}>
+    <div className={styles.description}>
+      <Link href={`/character/${id}`}>
       <h2>{title}</h2>
       <Image
             className={styles.image}
@@ -22,9 +20,7 @@ const Card = ({ title, image, paragraph, onDelete, showId }) => {
             width={200}
             height={200}
           />
-      {/* <img className={styles.image} src={image} alt={title} /> */}
-    
-      <span className={styles.spanDescription}>{paragraph}</span>
+      </Link>
       <button onClick={handleButtonClick}>DELETE</button>
     </div>
   );
