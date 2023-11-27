@@ -1,0 +1,60 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  
+  .paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .pWrapper{
+    display: flex;
+    gap:1rem;
+  }
+  
+  .paragraph {
+    color: #666; /* Set the paragraph text color */
+
+}
+  
+  .completed {
+    background-color: green;
+  }
+  
+  .notCompleted {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .input {
+    margin: auto;
+    padding: 0.4rem;
+  }
+  
+  .button {
+    width: 100px;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 0.4rem;
+  }
+  .deleteButton{
+   
+    all:unset;
+    text-align: center;
+    height:20px;
+    width: 25px;
+    max-width: 25px;
+    background-color: rgb(245, 57, 57);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 3px;
+
+  }
+  .deleteButton:hover{
+    background-color: rgb(248, 3, 3);
+  }

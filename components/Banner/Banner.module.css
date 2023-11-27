@@ -1,0 +1,42 @@
+/* Add this to your CSS file or style section */
+
+.banner {
+   
+    flex:1 1 0%;
+    background-color: #fff; /* Set the background color */
+    padding: 20px; /* Add some padding for better spacing */
+    border-radius: 8px; /* Add rounded corners for a nicer look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    margin-top: 20px; /* Adjust margin as needed */
+    
+    
+    height: auto;
+}
+
+.banner h2 {
+    color: #333; /* Set the heading color */
+}
+
+.banner p {
+    color: #666; /* Set the paragraph text color */
+}
+
+.banner blockquote {
+    margin: 10px 0; /* Add some margin to the blockquote */
+    font-style: italic; /* Make the blockquote italic */
+    color: #888; /* Set the blockquote text color */
+}
+
+/* You can customize these styles further based on your design preferences */
+
+@media only screen and (max-width: 1024px) {
+ 
+    .banner{
+        position: relative;
+        width: 70%;
+        margin: auto;
+        left:0;
+        box-sizing: border-box;
+        margin-bottom: 2rem;
+    }
+    }

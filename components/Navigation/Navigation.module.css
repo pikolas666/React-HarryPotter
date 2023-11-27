@@ -1,0 +1,100 @@
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 900;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+ 
+  
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 18px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav a:hover {
+  color: #ffd700; 
+}
+.burgerIcon{
+  display:none;
+  cursor: pointer;
+  
+}
+.burgerIcon:hover {
+  color: #ffd700; 
+}
+.show {
+  all:unset;
+  text-decoration: none;
+  background-color: #333;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 100px;
+  position: absolute;
+  transition: left 0.3s ease-in-out;
+  z-index: 99;
+   /* Move onto the screen when 'show' class is added */
+}
+.show a{
+  all:unset;
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 18px;
+}
+.dontShow{
+  all:unset;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  left: -100%; /* Initially off-screen */
+  margin-top: 100px;
+  transition: left 0.3s ease-in-out;
+  
+}
+.dontShow a{
+  all:unset;
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .nav {
+    display: none;
+    
+  }
+
+  .nav a {
+     margin: 10px 0;
+  }
+  .burgerIcon{
+    display:flex;
+  }
+}
+@media only screen and (min-width: 1024px) {
+.show {
+  display: none;
+ 
+}
+}
